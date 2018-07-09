@@ -56,7 +56,12 @@ public class Flight implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return 0;
+        Flight anotherFlight = (Flight) o;
+        if (this.origin.equals(anotherFlight.origin) && this.destination.equals(anotherFlight.destination)){
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
     @Override
